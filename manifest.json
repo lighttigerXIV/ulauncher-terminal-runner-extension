@@ -1,6 +1,6 @@
 {
     "required_api_version": "^2.0.0",
-    "name": "Terminal Runner (Debug)",
+    "name": "Terminal Runner",
     "description": "An extension that let's you run commands on a gui terminal",
     "developer_name": "lighttigerXIV",
     "icon": "images/icon.png",
