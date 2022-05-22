@@ -28,6 +28,16 @@
             "name": "Executing Parameter",
             "description": "The parameter your terminal uses to execute commands",
             "default_value": "--"
+        },
+        {
+            "id": "icon",
+            "type": "select",
+            "name": "Icon style",
+            "default_value": "black",
+            "options": [
+                {"text": "Black icon", "value": "black"},
+                {"text": "White icon", "value": "white"}
+            ]
         }
     ]
 }

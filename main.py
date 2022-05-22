@@ -24,6 +24,11 @@ class KeywordQueryEventListener(EventListener):
 
         command = event.get_argument()
 
+        iconStyle = extension.preferences["icon"]
+
+        if iconStyle == "black": optionIcon = "images/icon.png"
+        if iconStyle == "white": optionIcon = "images/icon-white.png"
+
         if command == None: 
 
             command = ""
@@ -31,7 +36,7 @@ class KeywordQueryEventListener(EventListener):
 
         data = { "command": command }
 
-        return RenderResultListAction([ExtensionResultItem(icon="images/icon.png",
+        return RenderResultListAction([ExtensionResultItem(icon=optionIcon,
                                                            name="Run %s" %command,
                                                            on_enter=ExtensionCustomAction(data))])
 
