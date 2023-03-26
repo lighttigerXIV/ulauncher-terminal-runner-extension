@@ -54,7 +54,7 @@ class RunCommand(EventListener):
         userShell = environ["SHELL"]
 
 
-        subprocess.run( [f'{terminal} {exec} {userShell} -c "{command}; {userShell}"'], shell=True )
+        subprocess.run( [f'{terminal} {exec} {userShell} -c -i "{command}; {userShell}"'], shell=True )
 
         return HideWindowAction()
 
