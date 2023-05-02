@@ -30,6 +30,16 @@
             "default_value": "--"
         },
         {
+            "id": "shell",
+            "type": "select",
+            "name": "Shell",
+            "default_value": "others",
+            "options": [
+                {"text": "Bash / Zsh", "value": "others"},
+                {"text": "Fish", "value": "fish"}
+            ]
+        },
+        {
             "id": "icon",
             "type": "select",
             "name": "Icon style",

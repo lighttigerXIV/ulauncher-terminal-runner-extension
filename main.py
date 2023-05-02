@@ -50,11 +50,14 @@ class RunCommand(EventListener):
         terminal = extension.preferences["term"]
         exec = extension.preferences["exec"]
         command = data["command"]
+        shell = extension.preferences["shell"]
 
-        userShell = environ["SHELL"]
+        envUserShell = environ["SHELL"]
 
-
-        subprocess.run( [f'{terminal} {exec} {userShell} -c -i "{command}; {userShell}"'], shell=True )
+        if shell == "fish":
+            subprocess.run( [f'{terminal} {exec} {envUserShell} -c "{command}; {envUserShell}"'], shell=True )
+        else:
+            subprocess.run( [f'{terminal} {exec} {envUserShell} -c -i "{command}; {envUserShell}"'], shell=True )
 
         return HideWindowAction()
 
