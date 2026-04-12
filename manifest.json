@@ -30,13 +30,13 @@
             "default_value": "--"
         },
         {
-            "id": "shell",
+            "id": "keep_open",
             "type": "select",
-            "name": "Shell",
-            "default_value": "others",
+            "name": "Keep Terminal Open after executing",
+            "default_value": "yes",
             "options": [
-                {"text": "Bash / Zsh", "value": "others"},
-                {"text": "Fish", "value": "fish"}
+                {"text": "Yes", "value": "yes"},
+                {"text": "Ask", "value": "ask"}
             ]
         },
         {
